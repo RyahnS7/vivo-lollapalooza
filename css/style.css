@@ -1,0 +1,851 @@
+
+/* ==========================================
+   VIVO x LOLLA
+   EDITORIAL / FESTIVAL / COLLAGE
+========================================== */
+
+:root {
+    --purple-deep: #36004F;
+    --purple-dark: #4D0870;
+    --purple: #7415A4;
+    --purple-bright: #A43BD0;
+    --pink: #F28BCB;
+    --pink-light: #FFB7DE;
+    --paper: #F7EFF8;
+    --white: #FFF9FF;
+    --ink: #27102F;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.background-glow {
+    display: none;
+}
+
+.header {
+    position: relative;
+    z-index: 10;
+    padding: 20px 8%;
+}
+
+.logo {
+    color: var(--purple);
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+.header-tag {
+    color: var(--purple);
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.festival-hero {
+    position: relative;
+    width: 88%;
+    max-width: 1120px;
+    min-height: 690px;
+    margin: 25px auto 0;
+    padding: 70px 55px 45px;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(190, 83, 218, .8),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 90% 85%,
+            rgba(242, 139, 203, .45),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #7715A5,
+            #51076E 55%,
+            #36004F
+        );
+
+    border: 8px solid var(--white);
+
+    box-shadow:
+        0 15px 40px rgba(64, 0, 84, .18),
+        7px 7px 0 var(--pink);
+
+    transform: rotate(-.4deg);
+}
+
+.hero-grain {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: .16;
+    pointer-events: none;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(255,255,255,.12) 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 5px,
+            rgba(255,255,255,.06) 6px
+        );
+}
+
+/* Adesivos */
+
+.hero-sticker {
+    position: absolute;
+    z-index: 4;
+    padding: 11px 16px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sticker-vivo {
+    top: 45px;
+    left: 45px;
+    background: var(--pink);
+    color: var(--purple-deep);
+    transform: rotate(-6deg);
+}
+
+.sticker-date {
+    top: 55px;
+    right: 45px;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,.6);
+    transform: rotate(5deg);
+}
+
+/* Título */
+
+.hero-composition {
+    position: relative;
+    z-index: 3;
+    max-width: 760px;
+    margin: 65px auto 0;
+    text-align: center;
+}
+
+.hero-overline {
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--pink-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    line-height: .87;
+}
+
+.word-find {
+    font-size: clamp(58px, 9vw, 110px);
+    color: var(--white);
+    letter-spacing: -6px;
+
+    transform: rotate(-3deg);
+    text-shadow: 5px 5px 0 var(--purple-deep);
+
+    animation: titleEntry .8s ease both;
+}
+
+.word-your {
+    position: relative;
+    margin-top: 18px;
+
+    font-size: clamp(36px, 5vw, 55px);
+    color: var(--pink-light);
+    letter-spacing: 5px;
+
+    transform: rotate(3deg);
+    animation: titleEntry .9s .1s ease both;
+}
+
+.word-your-decoration {
+    position: absolute;
+    right: -40px;
+    top: -10px;
+    font-size: 25px;
+    color: var(--white);
+}
+
+.word-connection {
+    margin-top: 18px;
+
+    font-size: clamp(45px, 8vw, 90px);
+    color: var(--pink);
+
+    letter-spacing: -5px;
+    -webkit-text-stroke: 1px var(--white);
+
+    transform: rotate(1deg);
+    text-shadow: 5px 5px 0 var(--purple-deep);
+
+    animation: titleEntry 1s .2s ease both;
+}
+
+.word-lolla {
+    margin-top: 28px;
+
+    color: var(--white);
+    font-size: clamp(38px, 7vw, 75px);
+    letter-spacing: 2px;
+
+    transform: rotate(-2deg);
+}
+
+.word-lolla strong {
+    color: var(--pink-light);
+    font-size: 1.3em;
+    letter-spacing: -4px;
+    text-shadow: 5px 5px 0 var(--purple-deep);
+}
+
+/* Entrada dos textos */
+
+@keyframes titleEntry {
+    from {
+        opacity: 0;
+        transform: translateY(25px) rotate(-2deg);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ==========================================
+   ELEMENTOS FLUTUANTES
+========================================== */
+
+.floating-star {
+    position: absolute;
+    z-index: 2;
+    color: var(--pink-light);
+    font-size: 100px;
+    animation: floatElement 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.star-a {
+    top: 25%;
+    left: 4%;
+    transform: rotate(-15deg);
+}
+
+.star-b {
+    top: 42%;
+    right: 6%;
+    font-size: 75px;
+    color: var(--white);
+    animation-delay: 1s;
+}
+
+.star-c {
+    bottom: 12%;
+    right: 20%;
+    font-size: 55px;
+    animation-delay: 2s;
+}
+
+.floating-lightning {
+    position: absolute;
+    z-index: 2;
+    top: 18%;
+    right: 20%;
+
+    color: var(--pink);
+    font-size: 100px;
+
+    transform: rotate(15deg);
+    animation: floatElement 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatElement {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -15px;
+    }
+}
+
+
+/* Discos de vinil */
+
+.vinyl {
+    position: absolute;
+    z-index: 1;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #27102F 0px,
+            #27102F 3px,
+            #49334F 4px,
+            #27102F 6px
+        );
+
+    box-shadow: 5px 8px 0 rgba(0,0,0,.2);
+}
+
+.vinyl-center {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    background: var(--pink-light);
+    border: 8px solid var(--white);
+}
+
+.vinyl-one {
+    left: 4%;
+    bottom: 10%;
+    transform: rotate(-20deg);
+}
+
+.vinyl-two {
+    width: 90px;
+    height: 90px;
+
+    right: 7%;
+    bottom: 22%;
+    transform: rotate(15deg);
+    opacity: .85;
+}
+
+.vinyl-two .vinyl-center {
+    width: 24px;
+    height: 24px;
+    border-width: 5px;
+}
+
+/* Faixa decorativa */
+
+.hero-tape {
+    position: absolute;
+    z-index: 4;
+    bottom: 22%;
+    right: -15px;
+
+    padding: 10px 30px;
+
+    background: var(--pink);
+    color: var(--purple-deep);
+
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    transform: rotate(-7deg);
+}
+
+
+/* ==========================================
+   PARTE INFERIOR DO HERO
+========================================== */
+
+.hero-bottom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    margin-top: 50px;
+}
+
+.hero-bottom-content p {
+    color: var(--white);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.discover-button {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 15px 20px;
+
+    background: var(--pink);
+    color: var(--purple-deep);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+    transition: .3s;
+    box-shadow: 4px 4px 0 var(--white);
+}
+
+.discover-button:hover {
+    transform: translateY(-5px) rotate(-2deg);
+    box-shadow: 7px 7px 0 var(--white);
+}
+
+.discover-button span {
+    font-size: 20px;
+}
+
+.hero-signature {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+
+    color: var(--pink-light);
+    font-size: 15px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.hero-counter {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero-counter span {
+    color: var(--pink);
+}
+
+
+/* ==========================================
+   ÁREA DAS CAMPANHAS
+========================================== */
+
+.explore-section {
+    max-width: 1100px;
+    width: 86%;
+    margin: 110px auto 70px;
+}
+
+.explore-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.section-kicker {
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.explore-top h2 {
+    margin-top: 18px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--purple-deep);
+
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.explore-top h2 span {
+    color: #D84A9F;
+}
+
+.explore-description {
+    max-width: 270px;
+    color: #795E82;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   CARTÕES ARTÍSTICOS
+========================================== */
+
+.campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    align-items: center;
+}
+
+.campaign-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 310px;
+    padding: 24px 20px;
+
+    overflow: hidden;
+    border: 0;
+    border-radius: 3px;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: .35s ease;
+    box-shadow: 5px 7px 0 var(--pink);
+}
+
+.card-purple {
+    background: var(--purple);
+    color: var(--white);
+    transform: rotate(-2deg);
+}
+
+.card-pink {
+    background: var(--pink);
+    color: var(--purple-deep);
+    transform: rotate(2deg);
+    box-shadow: 5px 7px 0 var(--purple);
+}
+
+.card-lilac {
+    background: var(--purple-bright);
+    color: var(--white);
+    transform: rotate(-1deg);
+}
+
+.card-dark {
+    background: var(--purple-deep);
+    color: var(--white);
+    transform: rotate(2deg);
+}
+
+.campaign-card:hover {
+    transform: translateY(-12px) rotate(0);
+    box-shadow: 8px 12px 0 var(--pink);
+}
+
+.card-index {
+    position: relative;
+    z-index: 2;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.card-label {
+    position: relative;
+    z-index: 2;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.card-title {
+    position: relative;
+    z-index: 2;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 800;
+    line-height: .95;
+    letter-spacing: -2px;
+}
+
+.card-decoration {
+    position: absolute;
+    top: 55px;
+    right: -10px;
+
+    font-size: 125px;
+    opacity: .22;
+    transform: rotate(15deg);
+    transition: .4s;
+}
+
+.campaign-card:hover .card-decoration {
+    transform: rotate(40deg) scale(1.2);
+}
+
+.card-bottom {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,.4);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.card-bottom b {
+    font-size: 22px;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.explore-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 65px;
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(118,21,166,.2);
+
+    color: var(--purple);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 850px) {
+
+    .campaign-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campaign-card {
+        min-height: 270px;
+    }
+
+    .explore-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .explore-description {
+        max-width: 450px;
+    }
+
+    .vinyl-one {
+        opacity: .6;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px 7%;
+    }
+
+    .festival-hero {
+        width: 92%;
+        min-height: 620px;
+        padding: 65px 15px 40px;
+        margin-top: 15px;
+    }
+
+    .hero-composition {
+        margin-top: 95px;
+    }
+
+    .hero-overline {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    .word-find {
+        font-size: clamp(46px, 12vw, 65px);
+        letter-spacing: -3px;
+    }
+
+    .word-connection {
+        font-size: clamp(38px, 10vw, 55px);
+        letter-spacing: -3px;
+    }
+
+    .word-lolla {
+        font-size: 35px;
+    }
+
+    .word-your {
+        font-size: 32px;
+    }
+
+    .hero-bottom-content {
+        flex-direction: column;
+        gap: 22px;
+        margin-top: 40px;
+    }
+
+    .hero-bottom-content p {
+        text-align: center;
+    }
+
+    .discover-button {
+        font-size: 9px;
+    }
+
+    .sticker-vivo {
+        top: 25px;
+        left: 20px;
+        font-size: 8px;
+    }
+
+    .sticker-date {
+        top: 25px;
+        right: 15px;
+        font-size: 7px;
+        padding: 8px;
+    }
+
+    .floating-star {
+        font-size: 55px;
+    }
+
+    .floating-lightning {
+        font-size: 60px;
+        right: 8%;
+    }
+
+    .vinyl-one {
+        width: 85px;
+        height: 85px;
+        bottom: 8%;
+        left: -15px;
+    }
+
+    .vinyl-one .vinyl-center {
+        width: 25px;
+        height: 25px;
+        border-width: 5px;
+    }
+
+    .vinyl-two {
+        width: 55px;
+        height: 55px;
+        right: 5%;
+    }
+
+    .vinyl-two .vinyl-center {
+        width: 18px;
+        height: 18px;
+        border-width: 4px;
+    }
+
+    .hero-tape {
+        font-size: 8px;
+        bottom: 19%;
+    }
+
+    .hero-signature {
+        left: 15px;
+        font-size: 10px;
+    }
+
+    .hero-counter {
+        right: 15px;
+        font-size: 10px;
+    }
+
+    .explore-section {
+        width: 88%;
+        margin-top: 80px;
+    }
+
+    .campaign-grid {
+        gap: 18px;
+    }
+
+    .campaign-card {
+        min-height: 230px;
+        padding: 18px 14px;
+    }
+
+    .card-title {
+        font-size: 27px;
+    }
+
+    .card-decoration {
+        font-size: 85px;
+    }
+
+    .card-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .explore-footer {
+        flex-direction: column;
+        font-size: 9px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-star,
+    .floating-lightning {
+        animation: none;
+    }
+
+    .word-find,
+    .word-your,
+    .word-connection {
+        animation: none;
+    }
+}
+
+.page {
+    display: none !important;
+}
+
+.page.active {
+    display: block !important;
+}

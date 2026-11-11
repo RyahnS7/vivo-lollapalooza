@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vivo × Lollapalooza | Encontre sua conexão</title>
+
+    <!-- Fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         PÁGINA INICIAL
+    ====================================== -->
+
+    <section id="inicio" class="page active">
+
+        <!-- HERO / CAPA DO FESTIVAL -->
+
+        <div class="festival-hero">
+
+            <div class="hero-grain"></div>
+
+            <span class="hero-sticker sticker-vivo">
+                VIVO APRESENTA ✦
+            </span>
+
+            <span class="hero-sticker sticker-date">
+                MÚSICA • ARTE • CONEXÃO
+            </span>
+
+            <!-- Elementos gráficos -->
+
+            <div class="floating-star star-a">✳</div>
+            <div class="floating-star star-b">✦</div>
+            <div class="floating-star star-c">✳</div>
+
+            <div class="floating-lightning">ϟ</div>
+
+            <div class="vinyl vinyl-one">
+                <div class="vinyl-center"></div>
+            </div>
+
+            <div class="vinyl vinyl-two">
+                <div class="vinyl-center"></div>
+            </div>
+
+            <div class="hero-tape">
+                TURN UP THE VOLUME!
+            </div>
+
+            <!-- Título principal -->
+
+            <div class="hero-composition">
+
+                <span class="hero-overline">
+                    A EXPERIÊNCIA COMEÇA AQUI
+                </span>
+
+                <h1 class="main-title">
+
+                    <span class="word-find">
+                        ENCONTRE
+                    </span>
+
+                    <span class="word-your">
+                        SUA
+                        <span class="word-your-decoration">♥</span>
+                    </span>
+
+                    <span class="word-connection">
+                        CONEXÃO
+                    </span>
+
+                    <span class="word-lolla">
+                        NO <strong>LOLLA</strong>
+                    </span>
+
+                </h1>
+
+                <div class="hero-bottom-content">
+
+                    <p>
+                        A música aproxima.<br>
+                        A conexão transforma.
+                    </p>
+
+                    <a href="#explore" class="discover-button">
+                        DESCUBRA AS CAMPANHAS
+                        <span>↓</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-signature">
+                VIVA O AO VIVO.
+            </div>
+
+            <div class="hero-counter">
+                01 <span>—</span> 04
+            </div>
+
+        </div>
+
+
+        <!-- SEÇÃO DAS CAMPANHAS -->
+
+        <section class="explore-section" id="explore">
+
+            <div class="explore-top">
+
+                <div>
+
+                    <span class="section-kicker">
+                        ✦ ESCOLHA SUA EXPERIÊNCIA
+                    </span>
+
+                    <h2>
+                        Quatro campanhas.<br>
+                        <span>Infinitas conexões.</span>
+                    </h2>
+
+                </div>
+
+                <p class="explore-description">
+                    Cada experiência tem uma história.
+                    Escolha por onde quer começar.
+                </p>
+
+            </div>
+
+
+            <!-- CARTÕES DAS CAMPANHAS -->
+
+            <div class="campaign-grid">
+
+                <!-- CAMPANHA 01 -->
+
+                <button
+                    class="campaign-card card-purple"
+                    onclick="abrirCampanha(1)">
+
+                    <span class="card-index">01 / 04</span>
+
+                    <span class="card-decoration">✳</span>
+
+                    <span class="card-label">
+                        DESCUBRA
+                    </span>
+
+                    <span class="card-title">
+                        CAMPANHA<br>01
+                    </span>
+
+                    <span class="card-bottom">
+                        EXPLORAR <b>↗</b>
+                    </span>
+
+                </button>
+
+
+                <!-- CAMPANHA 02 -->
+
+                <button
+                    class="campaign-card card-pink"
+                    onclick="abrirCampanha(2)">
+
+                    <span class="card-index">02 / 04</span>
+
+                    <span class="card-decoration">✦</span>
+
+                    <span class="card-label">
+                        CONECTE-SE
+                    </span>
+
+                    <span class="card-title">
+                        CAMPANHA<br>02
+                    </span>
+
+                    <span class="card-bottom">
+                        EXPLORAR <b>↗</b>
+                    </span>
+
+                </button>
+
+
+                <!-- CAMPANHA 03 -->
+
+                <button
+                    class="campaign-card card-lilac"
+                    onclick="abrirCampanha(3)">
+
+                    <span class="card-index">03 / 04</span>
+
+                    <span class="card-decoration">ϟ</span>
+
+                    <span class="card-label">
+                        VIVA
+                    </span>
+
+                    <span class="card-title">
+                        CAMPANHA<br>03
+                    </span>
+
+                    <span class="card-bottom">
+                        EXPLORAR <b>↗</b>
+                    </span>
+
+                </button>
+
+
+                <!-- CAMPANHA 04 -->
+
+                <button
+                    class="campaign-card card-dark"
+                    onclick="abrirCampanha(4)">
+
+                    <span class="card-index">04 / 04</span>
+
+                    <span class="card-decoration">♥</span>
+
+                    <span class="card-label">
+                        SINTA A MÚSICA
+                    </span>
+
+                    <span class="card-title">
+                        CAMPANHA<br>04
+                    </span>
+
+                    <span class="card-bottom">
+                        EXPLORAR <b>↗</b>
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- RODAPÉ -->
+
+            <div class="explore-footer">
+
+                <span>VIVO × LOLLA</span>
+
+                <span>
+                    FEITO PARA VIVER O AO VIVO ✦
+                </span>
+
+                <span>2026</span>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <!-- CAMPANHA 01 -->
+
+    <section id="campanha-1" class="page campaign-page">
+
+        <div class="campaign-header">
+
+            <button onclick="voltarInicio()">
+                ← VOLTAR AO INÍCIO
+            </button>
+
+            <span>VIVO × LOLLA</span>
+
+            <span>01 / 04</span>
+
+        </div>
+
+
+        <div class="campaign-content">
+
+            <span class="section-kicker">
+                PRIMEIRA EXPERIÊNCIA ✦
+            </span>
+
+            <h1>
+                CAMPANHA <span>01</span>
+            </h1>
+
+            <!-- Espaço reservado para a imagem -->
+
+            <div class="campaign-image-placeholder">
+                <span>IMAGEM DA CAMPANHA 01</span>
+                <p>Inserir imagem da campanha 01</p>
+            </div>
+
+
+            <div class="campaign-text">
+
+                <span class="section-kicker">
+                    CONHEÇA A EXPERIÊNCIA
+                </span>
+
+                <h2>
+                    Toda conexão tem uma história.
+                </h2>
+
+                <p>
+                    Texto da campanha 1
+                </p>
+
+            </div>
+
+            <div class="campaign-navigation">
+
+                <span>CONTINUE SUA EXPERIÊNCIA</span>
+
+                <button onclick="abrirCampanha(2)">
+                    PRÓXIMA CAMPANHA
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="campanha-2" class="page campaign-page">
+
+        <div class="campaign-header">
+
+            <button onclick="voltarInicio()">
+                ← VOLTAR AO INÍCIO
+            </button>
+
+            <span>VIVO × LOLLA</span>
+
+            <span>02 / 04</span>
+
+        </div>
+
+
+        <div class="campaign-content">
+
+            <span class="section-kicker">
+                SEGUNDA EXPERIÊNCIA ✦
+            </span>
+
+            <h1>
+                CAMPANHA <span>02</span>
+            </h1>
+
+            <!-- Espaço reservado para a imagem -->
+
+            <div class="campaign-image-placeholder">
+                <span>IMAGEM DA CAMPANHA 02</span>
+                <p>Imagem da campanha 02</p>
+            </div>
+
+            <!-- Texto explicativo -->
+
+            <div class="campaign-text">
+
+                <span class="section-kicker">
+                    CONHEÇA A EXPERIÊNCIA
+                </span>
+
+                <h2>
+                    Uma nova forma de se conectar.
+                </h2>
+
+                <p>
+                    Aqui será inserido o texto explicativo
+                    da segunda campanha.
+
+                    Utilize este espaço para apresentar
+                    a iniciativa, seus objetivos e o que
+                    ela representa dentro do festival.
+                </p>
+
+            </div>
+
+            <div class="campaign-navigation">
+
+                <span>CONTINUE SUA EXPERIÊNCIA</span>
+
+                <button onclick="abrirCampanha(3)">
+                    PRÓXIMA CAMPANHA
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CAMPANHA 03
+    ====================================== -->
+
+    <section id="campanha-3" class="page campaign-page">
+
+        <div class="campaign-header">
+
+            <button onclick="voltarInicio()">
+                ← VOLTAR AO INÍCIO
+            </button>
+
+            <span>VIVO × LOLLA</span>
+
+            <span>03 / 04</span>
+
+        </div>
+
+
+        <div class="campaign-content">
+
+            <span class="section-kicker">
+                TERCEIRA EXPERIÊNCIA ✦
+            </span>
+
+            <h1>
+                CAMPANHA <span>03</span>
+            </h1>
+
+            <!-- Espaço reservado para a imagem -->
+
+            <div class="campaign-image-placeholder">
+                <span>IMAGEM DA CAMPANHA 03</span>
+                <p>Insira sua imagem posteriormente</p>
+            </div>
+
+            <!-- Texto explicativo -->
+
+            <div class="campaign-text">
+
+                <span class="section-kicker">
+                    CONHEÇA A EXPERIÊNCIA
+                </span>
+
+                <h2>
+                    Viva cada momento intensamente.
+                </h2>
+
+                <p>
+                    Aqui será inserido o texto explicativo
+                    da terceira campanha.
+
+                    Apresente os detalhes da ação e
+                    explique como ela proporciona uma
+                    experiência diferente para o público.
+                </p>
+
+            </div>
+
+            <div class="campaign-navigation">
+
+                <span>CONTINUE SUA EXPERIÊNCIA</span>
+
+                <button onclick="abrirCampanha(4)">
+                    PRÓXIMA CAMPANHA
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CAMPANHA 04
+    ====================================== -->
+
+    <section id="campanha-4" class="page campaign-page">
+
+        <div class="campaign-header">
+
+            <button onclick="voltarInicio()">
+                ← VOLTAR AO INÍCIO
+            </button>
+
+            <span>VIVO × LOLLA</span>
+
+            <span>04 / 04</span>
+
+        </div>
+
+
+        <div class="campaign-content">
+
+            <span class="section-kicker">
+                QUARTA EXPERIÊNCIA ✦
+            </span>
+
+            <h1>
+                CAMPANHA <span>04</span>
+            </h1>
+
+            <!-- Espaço reservado para a imagem -->
+
+            <div class="campaign-image-placeholder">
+                <span>IMAGEM DA CAMPANHA 04</span>
+                <p>Insira sua imagem posteriormente</p>
+            </div>
+
+            <!-- Texto explicativo -->
+
+            <div class="campaign-text">
+
+                <span class="section-kicker">
+                    CONHEÇA A EXPERIÊNCIA
+                </span>
+
+                <h2>
+                    A conexão continua além da música.
+                </h2>
+
+                <p>
+                    Aqui será inserido o texto explicativo
+                    da quarta e última campanha.
+
+                    Utilize este espaço para apresentar
+                    a última iniciativa e seus principais
+                    diferenciais.
+                </p>
+
+            </div>
+
+            <div class="campaign-navigation">
+
+                <span>VOCÊ CHEGOU AO FINAL!</span>
+
+                <button onclick="voltarInicio()">
+                    VOLTAR AO INÍCIO
+                    <span>↗</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
