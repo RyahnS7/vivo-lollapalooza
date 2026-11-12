@@ -460,6 +460,9 @@ body {
 /* ==========================================
    ÁREA DAS CAMPANHAS
 ========================================== */
+html {
+    scroll-behavior: smooth;
+}
 
 .explore-section {
     max-width: 1100px;
