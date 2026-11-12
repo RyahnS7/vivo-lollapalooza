@@ -1,27 +1,27 @@
 
 /* =====================================
-   ABRIR CAMPANHAS
+   ABRIR PEÇAS
 ===================================== */
 
-function abrirCampanha(numero) {
+function abrirPeca(numero) {
 
-    const campanha = document.getElementById("campanha-" + numero);
+    const peca = document.getElementById("peca-" + numero);
 
-    if (!campanha) return;
+    if (!peca) return;
 
     // Esconde todas as páginas
     document.querySelectorAll(".page").forEach(pagina => {
         pagina.classList.remove("active");
     });
 
-    // Mostra somente a campanha escolhida
-    campanha.classList.add("active");
+    // Mostra somente a peça escolhida
+    peca.classList.add("active");
 
     // Atualiza o endereço
     history.pushState(
         { pagina: numero },
         "",
-        "#campanha-" + numero
+        "#peca-" + numero
     );
 
     // Volta para o topo
@@ -64,10 +64,10 @@ function voltarInicio() {
 window.addEventListener("popstate", () => {
 
     const hash = window.location.hash;
-    const numero = hash.match(/^#campanha-([1-4])$/);
+    const numero = hash.match(/^#peca-([1-4])$/);
 
     if (numero) {
-        abrirCampanha(Number(numero[1]));
+        abrirPeca(Number(numero[1]));
     } else {
         voltarInicio();
     }
