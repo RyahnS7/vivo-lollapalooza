@@ -819,11 +819,10 @@ button {
     position: relative;
     display: grid;
     place-items: center;
-    width: 100%;
-    min-height: 280px;
-    margin: 28px 0 56px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 28px auto 56px;
     overflow: hidden;
-    aspect-ratio: 16 / 7;
     border: 7px solid var(--white);
     background:
         linear-gradient(135deg, rgba(37,0,51,.25), rgba(239,85,189,.25)),
@@ -832,17 +831,25 @@ button {
     transform: rotate(-1deg);
 }
 
-.campaign-image-placeholder img {
-    position: absolute;
-    inset: 0;
+/* sem imagem: mantém o quadro do placeholder */
+.campaign-image-placeholder:not(:has(img)) {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-height: 400px;
+    aspect-ratio: 16 / 7;
+}
+
+/* com imagem: o quadro acompanha a proporção da peça, sem cortar */
+.campaign-image-placeholder img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
 }
 
 .campaign-image-placeholder span,
 .campaign-image-placeholder p {
-    position: relative;
+    position: absolute;
     z-index: 1;
     margin: 4px;
     color: white;
@@ -996,8 +1003,11 @@ button {
     }
 
     .campaign-image-placeholder {
-        min-height: 190px;
         margin-bottom: 42px;
+    }
+
+    .campaign-image-placeholder:not(:has(img)) {
+        min-height: 190px;
         aspect-ratio: 4 / 3;
     }
 
