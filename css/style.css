@@ -1423,5 +1423,56 @@ button {
     }
 }
 
+/* ==========================================
+   SETA DOS BOTÕES EXPLORAR
+   Compatibilidade com iPhone e Safari
+========================================== */
 
+.card-arrow {
+    display: inline-block;
+    position: relative;
+    flex-shrink: 0;
 
+    width: 36px;
+    height: 36px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        145deg,
+        #b9e8f5,
+        #70b8d5
+    );
+
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.18);
+}
+
+.card-arrow::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 11px;
+    height: 11px;
+
+    border-top: 4px solid white;
+    border-right: 4px solid white;
+}
+
+.card-arrow::after {
+    content: "";
+
+    position: absolute;
+    width: 4px;
+    height: 19px;
+
+    background: white;
+
+    top: 10px;
+    left: 15px;
+
+    transform: rotate(45deg);
+    border-radius: 2px;
+}
