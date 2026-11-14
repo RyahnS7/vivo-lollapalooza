@@ -501,55 +501,48 @@
         </div>
 
 
-        <div class="campaign-content">
+        <div class="campaign-content campaign-content-game">
 
-            <span class="section-kicker">
-                QUARTA EXPERIÊNCIA ✦
-            </span>
+            <span class="section-kicker">QUARTA EXPERIÊNCIA ✦</span>
 
-            <h1>
-                PEÇA <span>04</span>
-            </h1>
+            <h1>PEÇA <span>04</span></h1>
 
-            <!-- onde iremoss inserir as imagens da peça -->
-
-            <div class="campaign-image-placeholder">
-                <span>IMAGEM DA PEÇA 04</span>
-                <p>Insira sua imagem posteriormente</p>
+            <!-- Texto explicativo da quarta peça: personalize este conteúdo quando quiser. -->
+            <div class="campaign-text">
+                <span class="section-kicker">CONHEÇA A EXPERIÊNCIA</span>
+                <h2>Conexão que transforma cada momento.</h2>
+                <p>
+                    Aqui será inserido o texto explicativo da quarta peça.
+                    Apresente a proposta da experiência, explique a dinâmica
+                    da ação e convide o público a participar. Depois da leitura,
+                    é só continuar descendo a página para encontrar o desafio.
+                </p>
             </div>
 
-            <!-- explicação do texto -->
+            <div class="lolla-game" id="lollaWordSearch">
+                <div class="lolla-game-heading">
+                    <span class="lolla-game-badge">VIVO + LOLLAPALOOZA</span>
+                    <h2>Encontre sua <span>conexão</span></h2>
+                    <p>Encontre as quatro palavras. Quando todas forem reveladas, elas formarão a silhueta de uma pessoa — símbolo da conexão Vivo.</p>
+                </div>
 
-            <div class="campaign-text">
+                <div class="lolla-word-board" id="lollaWordBoard" aria-label="Tabuleiro do caça-palavras"></div>
+                <div class="lolla-game-progress" id="lollaGameProgress" aria-live="polite">0 / 8 encontradas</div>
+                <div class="lolla-word-bank" id="lollaWordBank" aria-label="Palavras para encontrar"></div>
 
-                <span class="section-kicker">
-                    CONHEÇA A EXPERIÊNCIA
-                </span>
-
-                <h2>
-                    A conexão continua além da música.
-                </h2>
-
-                <p>
-                    Aqui será inserido o texto explicativo
-                    da quarta e última peça.
-
-                    Utilize este espaço para apresentar
-                    a última iniciativa e seus principais
-                    diferenciais.
-                </p>
-
+                <div class="lolla-win-banner" id="lollaWinBanner" aria-live="polite">
+                    <strong>Você revelou a conexão!</strong>
+                    <p>As palavras formaram a silhueta da pessoa Vivo. A música conecta todo mundo!</p>
+                    <button type="button" id="lollaPlayAgain">Jogar novamente</button>
+                </div>
             </div>
 
             <div class="campaign-navigation">
-
                 <span>VOCÊ CHEGOU AO FINAL!</span>
-
                 <button onclick="voltarInicio()">
                     VOLTAR AO INÍCIO
                     <span>↗</span>
                 </button>
-
             </div>
 
         </div>
